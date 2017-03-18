@@ -1,6 +1,5 @@
 function kern-build {
 
-    KERN=$(ls -ld /usr/src/linux | cut -d ' ' -f 11 | sed 's/linux\-//g')
     printf "Note: your presently selected kernel is $KERN, if you would rather compile a different kernel stop this script with Ctrl-C and use eselect to select the kernel you want to build.\n"
 
     cd /usr/src/linux
