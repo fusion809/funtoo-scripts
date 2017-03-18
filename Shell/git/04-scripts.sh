@@ -1,4 +1,4 @@
-## Update local gentoo-scripts and gentoo-config repos
+## Update local funtoo-scripts and funtoo-config repos
 function cps {
     # scripts
     sudo chmod +x -R {$HOME,/root}/Shell/
@@ -9,18 +9,18 @@ function cps {
     sudo cp -a /root/{Shell,.bashrc,.zshrc} $FS/
 
     # config
-    if ! [[ -d $GC/etc/portage ]]; then
-        mkdir -p $GC/etc/portage
+    if ! [[ -d $FC/etc/portage ]]; then
+        mkdir -p $FC/etc/portage
     fi
-    sudo cp -a /etc/portage/* $GC/etc/portage
-    if ! [[ -d $GC/etc/kernels ]]; then
-        mkdir -p $GC/etc/kernels
+    sudo cp -a /etc/portage/* $FC/etc/portage
+    if ! [[ -d $FC/etc/kernels ]]; then
+        mkdir -p $FC/etc/kernels
     fi
-    sudo cp -a /etc/kernels/* $GC/etc/kernels
+    sudo cp -a /etc/kernels/* $FC/etc/kernels
 }
 
-function cdgc {
-    cd $GC
+function cdfc {
+    cd $FC
 }
 
 function cdfs {
@@ -29,5 +29,5 @@ function cdfs {
 
 ## Update gentoo-scripts GitHub repo
 function shup {
-  cps && cdfs && push "$1" && cd - && szsh && cdgc && push "$1" && cd -
+  cps && cdfs && push "$1" && cd - && szsh && cdfc && push "$1" && cd -
 }
