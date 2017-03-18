@@ -2,7 +2,7 @@
 function cps {
     # scripts
     sudo chmod +x -R {$HOME,/root}/Shell/
-    rm -rf $FS/Shell && mkdir $FS/Shell
+    sudo rm -rf $FS/Shell && mkdir $FS/Shell
     sudo rm -rf $FS/root/Shell
     cp -a $HOME/Shell/* $FS/Shell
     cp -a $HOME/{.bashrc,.zshrc} $FS/
