@@ -6,7 +6,7 @@ function cps {
     sudo rm -rf $FS/root/Shell
     cp -a $HOME/Shell/* $FS/Shell
     cp -a $HOME/{.bashrc,.zshrc} $FS/
-    sudo cp -a /root/{Shell,.bashrc,.zshrc} $FS/
+    sudo cp -a /root/{Shell,.bashrc,.zshrc} $FS/root
 
     # config
     if ! [[ -d $FC/etc/portage ]]; then
