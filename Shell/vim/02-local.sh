@@ -15,7 +15,11 @@ function vpk {
 }
 
 function vrm {
-	vim README*
+    if ls README* 1> /dev/null 2>&1; then
+        vim README*
+    else
+        vim README.md
+    fi
 }
 
 function vsp {
