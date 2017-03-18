@@ -6,6 +6,7 @@ function cps {
     sudo rm -rf $FS/root/Shell
     cp -a $HOME/Shell/* $FS/Shell
     cp -a $HOME/{.bashrc,.zshrc} $FS/
+    sudo mkdir -p $FS/root
     sudo cp -a /root/{Shell,.bashrc,.zshrc} $FS/root
 
     # config
