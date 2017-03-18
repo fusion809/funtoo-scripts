@@ -1,0 +1,3 @@
+function gvfgi {
+	gvd $FGI
+}
