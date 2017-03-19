@@ -1,5 +1,11 @@
 function ved {
-	vim *.ebuild
+	VERSION=(ls -lh | cut -d ' ' -f 9 | cut -d '-' -f 2 | sed 's/\.ebuild//g' | grep "[0-9]" | sort -u | tail -n 1)
+	if `echo $VERSION > /dev/null 2>&1`; then
+		VERSION=$(ls -lh | cut -d ' ' -f 9 | cut -d '-' -f 3 | sed 's/\.ebuild//g' | grep "[0-9]" | sort -u | tail -n 1)
+		vim *$VERSION.ebuild
+	else
+		vim *$VERSION.ebuild
+	fi
 }
 
 function vls {
