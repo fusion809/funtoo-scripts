@@ -10,6 +10,14 @@ function vbash {
 	vim $HOME/.bashrc
 }
 
+function vcfe {
+	vd "$HOME/Documents/CodeLite/CPP-Math-Projects/$1"
+}
+
+function gvcfe {
+	gvd "$HOME/Documents/CodeLite/CPP-Math-Projects/$1"
+}
+
 function vle {
 	vd $LE
 }
