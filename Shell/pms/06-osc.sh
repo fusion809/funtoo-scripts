@@ -1,3 +1,6 @@
 function osco {
-	osc co home:fusion809 "$@"
+	for i in "$@"
+	do
+		osc co home:fusion809 "$i"
+	done
 }
