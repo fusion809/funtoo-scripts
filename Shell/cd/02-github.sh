@@ -24,6 +24,10 @@ function cdpk {
 	cd "$GHUBM/packaging/$1"
 }
 
+function cdfo {
+	cdpk fusion809-overlay/$1
+}
+
 function cdst {
 	cdpk "sabayon-tools/$1"
 }
