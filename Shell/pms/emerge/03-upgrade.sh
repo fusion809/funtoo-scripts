@@ -21,5 +21,3 @@ function sync {
 function syncup {
 	sync && emup
 }
-
-alias update=syncup

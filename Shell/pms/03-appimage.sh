@@ -1,4 +1,3 @@
-
 export BASE_URL="https://raw.githubusercontent.com/fusion809"
 
 function trigger {
