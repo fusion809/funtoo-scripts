@@ -1,5 +1,5 @@
 function emrm {
-	sudo emerge -cav "$@"
+    sudo emerge -cav "$@"
 }
 
 alias depclean=emrm

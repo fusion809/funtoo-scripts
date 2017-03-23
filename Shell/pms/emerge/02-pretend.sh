@@ -1,7 +1,7 @@
 function empcv {
-  sudo emerge -pcv "$@"
+    sudo emerge -pcv "$@"
 }
 
 function empv {
-  sudo emerge -pv "$@"
+    sudo emerge -pv "$@"
 }
