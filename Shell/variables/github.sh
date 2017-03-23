@@ -13,4 +13,4 @@ export FS=$SCR/funtoo-scripts
 export GS=$SCR/gentoo-scripts-config-old
 export ST=$PKG/sabayon-tools
 export VI=$ED/vim
-export VM=$PKG/vim-overlay
+export VM=$PKG/fusion809-overlay

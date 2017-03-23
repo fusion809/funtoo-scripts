@@ -78,7 +78,7 @@ function ovimup {
 function vimup {
 
     pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
-    pushd $GHUBM/packaging/vim-overlay/app-editors/vim
+    pushd $GHUBM/packaging/fusion809-overlay/app-editors/vim
     lver_vim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
 
     if ! [[ $lver_vim == $pkgver ]]; then
@@ -87,7 +87,7 @@ function vimup {
     fi
     popd
 
-    pushd $GHUBM/packaging/vim-overlay/app-editors/vim-core
+    pushd $GHUBM/packaging/fusion809-overlay/app-editors/vim-core
     lver_vimc=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 3 | sed 's/\.ebuild//g')
     if ! [[ $lver_vimc == $pkgver ]]; then
         mv vim-core-$lver_vimc.ebuild vim-core-$pkgver.ebuild
@@ -95,7 +95,7 @@ function vimup {
     fi
     popd
 
-    pushd $GHUBM/packaging/vim-overlay/app-editors/gvim
+    pushd $GHUBM/packaging/fusion809-overlay/app-editors/gvim
     lver_gvim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
     if ! [[ $lver_gvim == $pkgver ]]; then
         mv gvim-$lver_gvim.ebuild gvim-$pkgver.ebuild
