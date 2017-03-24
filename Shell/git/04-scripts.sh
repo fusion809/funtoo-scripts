@@ -30,5 +30,5 @@ function cdfs {
 
 ## Update gentoo-scripts GitHub repo
 function shup {
-  cps && cdfs && push "$1" && cd - && szsh && cdfc && push "$1" && cd -
+  cps && cdfs && push "$1" && cd - && szsh && cdfc && pusha && cd -
 }
