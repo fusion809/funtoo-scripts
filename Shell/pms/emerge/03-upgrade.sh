@@ -19,5 +19,5 @@ function sync {
 }
 
 function syncup {
-    sync && emup
+    sync && emup && empr
 }
