@@ -82,7 +82,8 @@ function vimup {
     lver_vim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
 
     if ! [[ $lver_vim == $pkgver ]]; then
-        mv vim-$lver_vim.ebuild vim-$pkgver.ebuild
+        # Wildcard is required as otherwise -r1, -r2, -r3, etc. will be ignored as suffixes.
+        mv vim-$lver_vim*.ebuild vim-$pkgver.ebuild
         sudo ebuild vim-$pkgver.ebuild manifest merge
     fi
     popd
@@ -90,7 +91,7 @@ function vimup {
     pushd $GHUBM/packaging/fusion809-overlay/app-editors/vim-core
     lver_vimc=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 3 | sed 's/\.ebuild//g')
     if ! [[ $lver_vimc == $pkgver ]]; then
-        mv vim-core-$lver_vimc.ebuild vim-core-$pkgver.ebuild
+        mv vim-core-$lver_vimc*.ebuild vim-core-$pkgver.ebuild
         sudo ebuild vim-core-$pkgver.ebuild manifest merge
     fi
     popd
@@ -98,7 +99,7 @@ function vimup {
     pushd $GHUBM/packaging/fusion809-overlay/app-editors/gvim
     lver_gvim=$(ls | grep ebuild | sort -u | tail -n 2 | head -n 1 | cut -d '-' -f 2 | sed 's/\.ebuild//g')
     if ! [[ $lver_gvim == $pkgver ]]; then
-        mv gvim-$lver_gvim.ebuild gvim-$pkgver.ebuild
+        mv gvim-$lver_gvim*.ebuild gvim-$pkgver.ebuild
         sudo ebuild gvim-$pkgver.ebuild manifest merge
     fi
     push "Bumping version to $pkgver"
