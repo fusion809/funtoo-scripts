@@ -10,7 +10,6 @@ export WEB=$GHUBM/websites
 export FGI=$WEB/fusion809.github.io
 export FC=$CFG/funtoo-config
 export FS=$SCR/funtoo-scripts
-export GS=$SCR/gentoo-scripts-config-old
 export ST=$PKG/sabayon-tools
 export VI=$ED/vim
 export VM=$PKG/fusion809-overlay
