@@ -10,6 +10,14 @@ function cdgm {
 	cd "$GHUBM/$1"
 }
 
+function cdc {
+	cdgm "config/$1"
+}
+
+function cdgc {
+	cdc "gentoo-config/$1"
+}
+
 function cded {
 	cdgm "editors/$1"
 }
